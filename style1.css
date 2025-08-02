@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 70vw;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.heading{
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 3rem;
+}
+.desc{
+    text-align: center;
+    color: rgb(85, 81, 81);
+    width: 600px;
+    margin: 0 auto;
+}
+
+.cardcontainer{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgb(111, 103, 103);
+    border-radius: 8px;
+    
+}
+
+.imagecontainer{
+    height: 9rem;
+}
+
+.cardimage{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.cardtitlecontainer{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.cardtitle{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: black;
+    margin-bottom: 0.3rem;
+}
+.carddesc{
+    color: rgb(127, 117, 117);
+    font-size: 1rem;
+
+}
+
+.footersection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0.5rem;
+    gap: 0.7rem;
+}
+
+.authorsection{
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.authoravatar{
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgb(204, 195, 195);
+}
+
+.authordesc{
+    display: flex;
+    flex-direction: column;
+}
+
+.mainbox{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin-top: 1.7rem;
+}
+.cardcontainer:hover .cardimage{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+
+.cardtitle:hover{
+    color: rgb(62, 57, 113);
+}
+
+.authorname{
+    color: rgb(87, 87, 167);
+}
+
+.date{
+    color: rgb(99, 90, 90);
+    font-size: 0.8rem;
+}
+
+.cardtagcontainer{
+    color: rgb(89, 80, 80);
+    border: 1px solid rgb(96, 87, 87);
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width:1458px){
+    .mainbox{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (max-width:1096px){
+    .mainbox{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:734px){
+    .mainbox{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
